@@ -1,0 +1,30 @@
+<h1>Cadastrar</h1>
+
+
+<%= form_for @user, url: "/users" do |form| %>
+    <div>
+        <%= form.label :name, "Nome"%>
+        <%= form.text_field :name %>
+    </div>
+
+    <div>
+        <%= form.label :email, "E-mail"%>
+        <%= form.email_field :email%>
+    </div>
+
+    <div>
+        <%= form.label :password, "Senha"%>
+        <%= form.password_field :password%>
+    </div>
+
+    <div>
+        <%= form.label :confirm_password, "Confirme sua senha"%>
+        <%= form.password_field :confirm_password%>
+
+    </div>
+
+    <div>
+        <%= form.submit "Cadastrar"%>
+    </div>
+
+<% end %>

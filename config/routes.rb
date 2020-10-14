@@ -3,10 +3,13 @@ Rails.application.routes.draw do
   root to: "home#show"
 
   #cadastrar
-  get "/users/new", to: "users#new"
-  post "/users", to: "users#create"
+  #get "/users/new", to: "users#new"
+  #post "/users", to: "users#create"
+  #rails way to make a crud of users:
+  resources :users, only: [:new, :create]
 
   #login
-  get "/sessions/new", to: "sessions#new"
+  #get "/sessions/new", to: "sessions#new"
+  resources :sessions, only: [:new, :create] 
 
 end

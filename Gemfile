@@ -45,6 +45,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pry-meta'
   gem 'pry-rails'
+  gem 'factory_bot_rails'
 end
 
 group :test do

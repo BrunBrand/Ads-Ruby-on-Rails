@@ -1,9 +1,10 @@
 require "application_system_test_case"
+require 'factory_bot_rails'
 
 class LoginsTest < ApplicationSystemTestCase
     
   test "login com credencial valida" do 
-    user = FactoryBot.create(:user, password: "password", password_confirmation: "password")
+    user = FactoryBot.create(:user)
 
     visit root_path
     click_on "Entrar"
@@ -11,7 +12,7 @@ class LoginsTest < ApplicationSystemTestCase
     fill_in "E-mail", with: user.email
     fill_in "Senha", with: "password"
 
-    click_on "Entrar"
+    #click_on "Entrar"
 
     assert_text "Bem vindo Bruno!"
 

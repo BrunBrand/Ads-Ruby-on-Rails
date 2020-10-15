@@ -12,8 +12,12 @@
   <p>
    <%= flash.notice%>
   </p>
-  <%= link_to translate("menu.signup"), new_user_path %>
-  <%= link_to translate("menu.signin"), new_session_path %>
+  <% if user_signed_in? %>
+    estás logado
+  <% else %>
+    <%= link_to translate("menu.signup"), new_user_path %>
+    <%= link_to translate("menu.signin"), new_session_path %>
+  <%end%>
 
   <body>
     <%= yield %>

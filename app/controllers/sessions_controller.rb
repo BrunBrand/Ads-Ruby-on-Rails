@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
         reset_session
         session[:user_id] = user.id
         redirect_to root_path, notice: translate(".welcome", name: user.name)
+        
     end
 
 end

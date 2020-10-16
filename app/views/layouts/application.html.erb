@@ -14,7 +14,7 @@
    <%= flash.alert %>
   </p>
   <% if user_signed_in? %>
-    estás logado
+    <%= button_to translate("menu.logout"), sign_out_sessions_path, method: :delete %>
   <% else %>
     <%= link_to translate("menu.signup"), new_user_path %>
     <%= link_to translate("menu.signin"), new_session_path %>

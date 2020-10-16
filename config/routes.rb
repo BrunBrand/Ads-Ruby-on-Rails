@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   #login
   #get "/sessions/new", to: "sessions#new"
-  resources :sessions, only: [:new, :create] 
+  resources :sessions, only: [:new, :create] do
+    collection do
+      delete "sign_out", to: "sessions#destroy", as: "sign_out"
+    end
+  end 
 
 end

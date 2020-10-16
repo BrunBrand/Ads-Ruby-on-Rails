@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #rails way to make a crud of users:
   resources :users, only: [:new, :create]
 
-  resources :ads, only: [:new, :create]
+  resources :ads, only: [:new, :create, :edit, :update]
 
   #login
   #get "/sessions/new", to: "sessions#new"
